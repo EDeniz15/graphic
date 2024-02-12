@@ -5,10 +5,10 @@ import 'package:flutter/painting.dart';
 import 'package:graphic/src/aes/aes.dart';
 import 'package:graphic/src/aes/channel.dart';
 import 'package:graphic/src/aes/color.dart';
+import 'package:graphic/src/aes/elevation.dart';
 import 'package:graphic/src/aes/gradient.dart';
 import 'package:graphic/src/aes/position.dart';
 import 'package:graphic/src/aes/shape.dart';
-import 'package:graphic/src/aes/elevation.dart';
 import 'package:graphic/src/aes/size.dart';
 import 'package:graphic/src/algebra/varset.dart';
 import 'package:graphic/src/chart/chart.dart';
@@ -25,6 +25,7 @@ import 'package:graphic/src/coord/polar.dart';
 import 'package:graphic/src/coord/rect.dart';
 import 'package:graphic/src/data/data_set.dart';
 import 'package:graphic/src/dataflow/operator.dart';
+import 'package:graphic/src/dataflow/tuple.dart';
 import 'package:graphic/src/geom/element.dart';
 import 'package:graphic/src/geom/modifier/modifier.dart';
 import 'package:graphic/src/guide/annotation/custom.dart';
@@ -44,7 +45,6 @@ import 'package:graphic/src/interaction/signal.dart';
 import 'package:graphic/src/scale/linear.dart';
 import 'package:graphic/src/scale/ordinal.dart';
 import 'package:graphic/src/scale/scale.dart';
-import 'package:graphic/src/dataflow/tuple.dart';
 import 'package:graphic/src/scale/time.dart';
 import 'package:graphic/src/shape/shape.dart';
 import 'package:graphic/src/variable/transform/filter.dart';
@@ -63,7 +63,7 @@ EdgeInsets _defaultPolarPadding(Size _) => const EdgeInsets.all(10);
 /// Parses the specification for a view.
 void parse<D>(
   Chart<D> spec,
-  View<D> view,
+  ViewChart<D> view,
   Size chartSize,
 ) {
   // Signal

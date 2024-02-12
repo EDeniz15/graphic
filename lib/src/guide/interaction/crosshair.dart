@@ -1,6 +1,5 @@
 import 'dart:ui';
 
-import 'package:graphic/src/util/collection.dart';
 import 'package:graphic/src/chart/chart.dart';
 import 'package:graphic/src/chart/view.dart';
 import 'package:graphic/src/common/intrinsic_layers.dart';
@@ -13,6 +12,7 @@ import 'package:graphic/src/dataflow/tuple.dart';
 import 'package:graphic/src/graffiti/figure.dart';
 import 'package:graphic/src/graffiti/scene.dart';
 import 'package:graphic/src/interaction/selection/selection.dart';
+import 'package:graphic/src/util/collection.dart';
 import 'package:graphic/src/util/path.dart';
 
 /// The specification of a crosshair
@@ -87,7 +87,7 @@ class CrosshairRenderOp extends Render<CrosshairScene> {
   CrosshairRenderOp(
     Map<String, dynamic> params,
     CrosshairScene scene,
-    View view,
+    ViewChart view,
   ) : super(params, scene, view);
 
   @override

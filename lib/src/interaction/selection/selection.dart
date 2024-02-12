@@ -5,8 +5,8 @@ import 'package:flutter/painting.dart';
 import 'package:graphic/src/aes/aes.dart';
 import 'package:graphic/src/chart/view.dart';
 import 'package:graphic/src/common/dim.dart';
-import 'package:graphic/src/common/label.dart';
 import 'package:graphic/src/common/intrinsic_layers.dart';
+import 'package:graphic/src/common/label.dart';
 import 'package:graphic/src/common/operators/render.dart';
 import 'package:graphic/src/coord/coord.dart';
 import 'package:graphic/src/dataflow/operator.dart';
@@ -272,7 +272,7 @@ class SelectorRenderOp extends Render<SelectorScene> {
   SelectorRenderOp(
     Map<String, dynamic> params,
     SelectorScene scene,
-    View view,
+    ViewChart view,
   ) : super(params, scene, view);
 
   @override

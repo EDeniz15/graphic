@@ -1,15 +1,15 @@
 import 'dart:math';
 
+import 'package:flutter/painting.dart';
 import 'package:graphic/src/chart/view.dart';
 import 'package:graphic/src/common/dim.dart';
 import 'package:graphic/src/graffiti/figure.dart';
+import 'package:graphic/src/interaction/signal.dart';
 import 'package:graphic/src/shape/util/gradient.dart';
 import 'package:graphic/src/util/collection.dart';
-import 'package:flutter/painting.dart';
-import 'package:graphic/src/interaction/signal.dart';
+import 'package:graphic/src/util/math.dart';
 import 'package:graphic/src/util/transform.dart';
 import 'package:vector_math/vector_math_64.dart';
-import 'package:graphic/src/util/math.dart';
 
 import 'coord.dart';
 
@@ -282,7 +282,7 @@ class PolarRegionColorRenderOp extends RegionBackgroundRenderOp {
   PolarRegionColorRenderOp(
     Map<String, dynamic> params,
     RegionBackgroundScene scene,
-    View view,
+    ViewChart view,
   ) : super(params, scene, view);
 
   @override
@@ -308,7 +308,7 @@ class PolarRegionGradientRenderOp extends RegionBackgroundRenderOp {
   PolarRegionGradientRenderOp(
     Map<String, dynamic> params,
     RegionBackgroundScene scene,
-    View view,
+    ViewChart view,
   ) : super(params, scene, view);
 
   @override

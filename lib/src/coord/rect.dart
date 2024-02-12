@@ -1,10 +1,10 @@
+import 'package:flutter/painting.dart';
 import 'package:graphic/src/chart/view.dart';
 import 'package:graphic/src/common/dim.dart';
 import 'package:graphic/src/graffiti/figure.dart';
+import 'package:graphic/src/interaction/signal.dart';
 import 'package:graphic/src/shape/util/gradient.dart';
 import 'package:graphic/src/util/collection.dart';
-import 'package:flutter/painting.dart';
-import 'package:graphic/src/interaction/signal.dart';
 
 import 'coord.dart';
 
@@ -171,7 +171,7 @@ class RectRegionColorRenderOp extends RegionBackgroundRenderOp {
   RectRegionColorRenderOp(
     Map<String, dynamic> params,
     RegionBackgroundScene scene,
-    View view,
+    ViewChart view,
   ) : super(params, scene, view);
 
   @override
@@ -193,7 +193,7 @@ class RectRegionGradientRenderOp extends RegionBackgroundRenderOp {
   RectRegionGradientRenderOp(
     Map<String, dynamic> params,
     RegionBackgroundScene scene,
-    View view,
+    ViewChart view,
   ) : super(params, scene, view);
 
   @override

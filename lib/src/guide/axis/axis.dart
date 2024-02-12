@@ -2,8 +2,8 @@ import 'package:graphic/src/chart/chart.dart';
 import 'package:graphic/src/chart/view.dart';
 import 'package:graphic/src/common/defaults.dart';
 import 'package:graphic/src/common/dim.dart';
-import 'package:graphic/src/common/label.dart';
 import 'package:graphic/src/common/intrinsic_layers.dart';
+import 'package:graphic/src/common/label.dart';
 import 'package:graphic/src/common/operators/render.dart';
 import 'package:graphic/src/common/styles.dart';
 import 'package:graphic/src/coord/coord.dart';
@@ -254,7 +254,7 @@ class AxisRenderOp extends Render<AxisScene> {
   AxisRenderOp(
     Map<String, dynamic> params,
     AxisScene scene,
-    View view,
+    ViewChart view,
   ) : super(params, scene, view);
 
   @override
@@ -318,7 +318,7 @@ class GridScene extends Scene {
 
 /// The axis grid render operator.
 class GridRenderOp extends Render<GridScene> {
-  GridRenderOp(Map<String, dynamic> params, GridScene scene, View view)
+  GridRenderOp(Map<String, dynamic> params, GridScene scene, ViewChart view)
       : super(params, scene, view);
 
   @override

@@ -1,9 +1,8 @@
-import 'package:graphic/src/util/collection.dart';
 import 'package:flutter/painting.dart';
 import 'package:graphic/src/chart/chart.dart';
 import 'package:graphic/src/chart/view.dart';
-import 'package:graphic/src/common/label.dart';
 import 'package:graphic/src/common/intrinsic_layers.dart';
+import 'package:graphic/src/common/label.dart';
 import 'package:graphic/src/common/operators/render.dart';
 import 'package:graphic/src/coord/coord.dart';
 import 'package:graphic/src/dataflow/tuple.dart';
@@ -13,6 +12,7 @@ import 'package:graphic/src/interaction/selection/interval.dart';
 import 'package:graphic/src/interaction/selection/selection.dart';
 import 'package:graphic/src/scale/scale.dart';
 import 'package:graphic/src/util/assert.dart';
+import 'package:graphic/src/util/collection.dart';
 
 /// Gets the figures of a tooltip.
 ///
@@ -175,7 +175,7 @@ class TooltipRenderOp extends Render<TooltipScene> {
   TooltipRenderOp(
     Map<String, dynamic> params,
     TooltipScene scene,
-    View view,
+    ViewChart view,
   ) : super(params, scene, view);
 
   @override

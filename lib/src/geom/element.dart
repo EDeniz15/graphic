@@ -1,16 +1,14 @@
 import 'dart:async';
 import 'dart:ui';
 
-import 'package:graphic/src/interaction/selection/selection.dart';
-import 'package:graphic/src/util/collection.dart';
 import 'package:flutter/painting.dart';
 import 'package:graphic/src/aes/color.dart';
 import 'package:graphic/src/aes/elevation.dart';
 import 'package:graphic/src/aes/gradient.dart';
 import 'package:graphic/src/aes/label.dart';
-import 'package:graphic/src/algebra/varset.dart';
 import 'package:graphic/src/aes/shape.dart';
 import 'package:graphic/src/aes/size.dart';
+import 'package:graphic/src/algebra/varset.dart';
 import 'package:graphic/src/chart/view.dart';
 import 'package:graphic/src/common/intrinsic_layers.dart';
 import 'package:graphic/src/common/operators/render.dart';
@@ -19,6 +17,7 @@ import 'package:graphic/src/dataflow/operator.dart';
 import 'package:graphic/src/dataflow/tuple.dart';
 import 'package:graphic/src/graffiti/figure.dart';
 import 'package:graphic/src/graffiti/scene.dart';
+import 'package:graphic/src/interaction/selection/selection.dart';
 import 'package:graphic/src/scale/discrete.dart';
 import 'package:graphic/src/scale/scale.dart';
 import 'package:graphic/src/shape/area.dart';
@@ -28,12 +27,13 @@ import 'package:graphic/src/shape/point.dart';
 import 'package:graphic/src/shape/polygon.dart';
 import 'package:graphic/src/shape/shape.dart';
 import 'package:graphic/src/util/assert.dart';
+import 'package:graphic/src/util/collection.dart';
 
-import 'modifier/modifier.dart';
 import 'area.dart';
 import 'custom.dart';
 import 'interval.dart';
 import 'line.dart';
+import 'modifier/modifier.dart';
 import 'point.dart';
 import 'polygon.dart';
 
@@ -219,7 +219,7 @@ class ElementRenderOp extends Render<ElementScene> {
   ElementRenderOp(
     Map<String, dynamic> params,
     ElementScene scene,
-    View view,
+    ViewChart view,
   ) : super(params, scene, view);
 
   @override

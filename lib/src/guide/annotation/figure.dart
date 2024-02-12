@@ -1,7 +1,6 @@
 import 'dart:ui';
 
 import 'package:flutter/painting.dart';
-import 'package:graphic/src/util/collection.dart';
 import 'package:graphic/src/chart/view.dart';
 import 'package:graphic/src/common/intrinsic_layers.dart';
 import 'package:graphic/src/coord/coord.dart';
@@ -9,6 +8,7 @@ import 'package:graphic/src/dataflow/operator.dart';
 import 'package:graphic/src/graffiti/figure.dart';
 import 'package:graphic/src/scale/scale.dart';
 import 'package:graphic/src/util/assert.dart';
+import 'package:graphic/src/util/collection.dart';
 
 import 'annotation.dart';
 
@@ -111,7 +111,7 @@ class FigureAnnotRenderOp extends AnnotRenderOp<FigureAnnotScene> {
   FigureAnnotRenderOp(
     Map<String, dynamic> params,
     FigureAnnotScene scene,
-    View view,
+    ViewChart view,
   ) : super(params, scene, view);
 
   @override

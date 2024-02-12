@@ -9,8 +9,8 @@ import 'package:graphic/src/dataflow/tuple.dart';
 import 'package:graphic/src/graffiti/scene.dart';
 import 'package:graphic/src/util/assert.dart';
 
-import 'rect.dart';
 import 'polar.dart';
+import 'rect.dart';
 
 /// Specification of the coordinate.
 ///
@@ -144,6 +144,6 @@ abstract class RegionBackgroundRenderOp extends Render<RegionBackgroundScene> {
   RegionBackgroundRenderOp(
     Map<String, dynamic> params,
     RegionBackgroundScene scene,
-    View view,
+    ViewChart view,
   ) : super(params, scene, view);
 }
